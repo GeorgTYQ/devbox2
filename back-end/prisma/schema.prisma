@@ -14,13 +14,13 @@ datasource db {
 }
 
 model User {
-  id              String    @id @default (auto()) @map("_id") @db.ObjectId
-  name            String
-  age             Int?
-  dob             DateTime?
-  email           String
-  description     String?
-  createAt        DateTime   @default(now())
-  updateAt        DateTime   @updatedAt
-
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  email      String
+  html5      Int?
+  css3       Int?
+  javascript Int?
+  createdAt DateTime? @default(now())
+  updatedAt  DateTime @updatedAt
 }
+
